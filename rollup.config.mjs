@@ -1,4 +1,5 @@
 import nodeResolve from "@rollup/plugin-node-resolve";
+import typescript from "@rollup/plugin-typescript";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 
@@ -19,12 +20,18 @@ for (const key in metadata) {
   }
 }
 banner += "// ==/UserScript==\n";
+banner += `"use strict";\n`;
 
 /**
  * @type { import("rollup").RollupOptions }
  */
 export default {
-  plugins: [nodeResolve()],
+  plugins: [
+    nodeResolve(),
+    typescript({
+      tsconfig: "./tsconfig.json",
+    }),
+  ],
   input: "./src/index.ts",
   output: {
     file: "./dist/bundle.js",
