@@ -8,8 +8,15 @@ const metadata = JSON.parse(
 
 let banner = "// ==UserScript==\n";
 for (const key in metadata) {
-  const value = metadata[key];
-  banner += `// @${key.padEnd(12)} ${value}\n`;
+  let value = metadata[key];
+
+  if (typeof value === "string") {
+    value = [value];
+  }
+
+  for (const element of value) {
+    banner += `// @${key.padEnd(12)} ${element}\n`;
+  }
 }
 banner += "// ==/UserScript==\n";
 

@@ -5,5 +5,5 @@
   "description": "A Tampermonkey Template using TypeScript + Rollup",
   "author": "MioYi",
   "include": "https://mioyi.net/*",
-  "grant": "none"
+  "grant": ["none"]
 }
