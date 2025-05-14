@@ -1,0 +1,21 @@
+{
+  "name": "tampermonkey-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.10.0",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@types/node": "^22.15.18",
+    "@types/tampermonkey": "^5.0.4",
+    "rollup": "^4.40.2",
+    "typescript": "^5.8.3"
+  }
+}

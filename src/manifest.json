@@ -1,0 +1,9 @@
+{
+  "name": "tampermonkey-template",
+  "namespace": "https://mioyi.net/",
+  "version": "1.0.0",
+  "description": "A Tampermonkey Template using TypeScript + Rollup",
+  "author": "MioYi",
+  "include": "https://mioyi.net/*",
+  "grant": "none"
+}
